@@ -1,0 +1,23 @@
+name: Generate and Commit Documentation
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  generate-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - nam: List Files
+        run: ls
+
+      - name: Generate readme.txt
+        run: echo "Generated documentation" > readme.txt
+
+      - nam: List Files 2
+        run: ls
