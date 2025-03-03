@@ -18,6 +18,9 @@ jobs:
 
       - name: Generate readme.txt
         run: echo "Generated documentation" > readme.txt
+     
+      - name: Print documentation
+        run: cat readme.txt
 
       - name: List Files 2
         run: ls
