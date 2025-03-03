@@ -13,11 +13,11 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - nam: List Files
+      - name: List Files
         run: ls
 
       - name: Generate readme.txt
         run: echo "Generated documentation" > readme.txt
 
-      - nam: List Files 2
+      - name: List Files 2
         run: ls
