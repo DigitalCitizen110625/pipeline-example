@@ -7,7 +7,7 @@ on:
 
 jobs:
   generate-docs:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - uses: actions/checkout@v3
         with:
@@ -15,12 +15,9 @@ jobs:
 
       - name: List Files
         run: ls
+        
+      - name: Execute script file
+        run: ./buttscratcher.ps1
 
-      - name: Generate readme.txt
-        run: echo "Generated documentation" > readme.txt
-     
-      - name: Print documentation
-        run: cat readme.txt
-
-      - name: List Files 2
-        run: ls
+      - name: Check if python is installed
+        run: python --version
